@@ -8,6 +8,9 @@ class ArticlesController < ApplicationController
 
   # GET /articles/1 or /articles/1.json
   def show
+   
+    #article instance variable to make available to show views  => Article class
+    @article = Article.find(params[:id])
   end
 
   # GET /articles/new
