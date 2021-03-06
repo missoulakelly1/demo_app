@@ -1,14 +1,31 @@
-<p id="notice"><%= notice %></p>
+<div id="articles" class="container-fluid">
+ <h1>Article Show Page</h1>
+ 
+    <div class="row justify-content-md-center">
+      
+      <div class=" mt-4">
+    
+        <div class="card  shadow mb-5 bg-white rounded">
+       
+          <div class="card-header font-italic">
+           <h2><%= @article.title %></h2>
+           
+          </div>
+          <div class="card-body">
+            by Kelly Hanson
+            <p class="card-text text-start"><%= simple_format(@article.description) %></p>
+           
+            <%= link_to "Edit", edit_article_path(@article), class: "btn btn-outline-info" %>
+            <%= link_to "Delete", article_path(@article), class: "btn btn-outline-danger", method: :delete, data: {confirm: "Are you sure?"} %>
+          </div>
+          <div class="card-footer text-muted">
+            <small>Created <%= time_ago_in_words(@article.created_at) %> ago, 
+            edited <%= time_ago_in_words(@article.updated_at) %> ago</small>
+          </div>
+        </div>
+      </div>
+    </div>
+  
+  </div>
+</div> 
 
-<p>
-  <strong>Title: this is the article title</strong>
-  <%= @article.title %>
-</p>
-
-<p>
-  <strong>Description:</strong>
-  <%= @article.description %>
-</p>
-
-<%= link_to 'Edit', edit_article_path(@article) %> |
-<%= link_to 'Back', articles_path %>
