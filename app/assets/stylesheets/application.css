@@ -22,6 +22,12 @@
     color: #ffffff !important;
 }
 
+button .navbar-toggler {
+    color: #ffffff !important;
+}
+
+
+
 #logo {
     float: left;
     font-size: 1.7em;
