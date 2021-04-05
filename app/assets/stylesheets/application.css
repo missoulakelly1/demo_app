@@ -13,7 +13,7 @@
  *= require_tree .
  *= require_self
  */
-
+ @import 'bootstrap/dist/css/bootstrap';
  .navbar {
     background-color:#000000 !important;
 }
